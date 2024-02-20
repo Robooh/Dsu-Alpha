@@ -1,0 +1,49 @@
+A ideia do projeto vai ser um site com nav de 2 items, Logo e Shopping-Cart iccon
+Devera ter um contador de items no no SC que ira ser atualizado com Js
+
+A Main do projeto vai ser feito com uma ul li de cards de item de jogos,que deveram poder ser adicionadas ao carrinho com o preço e etc
+
+O Projeto sera feito em React e React-routers 
+pois havera 3 paginas
+
+UMA De pagina de boas vindas ao site
+A 2 UMA PAGINA de items de games
+3 a page de carrinho 
+
+pra ideias de design do site,utilizar o steam,mercado livre e outros
+
+A 1 page de introdução vai conter a Logo de Robo_oh
+Vai  ter um gif da arisu,abaixo do nome da empresa ou do site
+com um texto de "Bem vindo,aproveite o seu novo game" ou algo assim
+e vai ter um botton que vai levar a page de produtos
+(Feito)
+
+a page de produtos vai ter uma navbar que tera:
+icon de perfil do cliente,
+uma searchbar que ira filtar os item da loja,
+icone de logo da page que ira volta para essa pagina,quando estiver na page de carrinho,
+varios cards com os items de jogos com data como,nome,img,preço
+e que poderam ser add ao carrinho
+()
+
+a ultima pagina e o carrinho,decidir funcionalidade dps
+
+Base de estrutura de projeto React: 
+import React from 'react'
+import Header from '../components/Header'
+import MainContent from '../components/MainContent'
+import Sidebar from '../components/Sidebar'
+import Footer from '../components/Footer'
+
+const DefaultLayout = () => (
+  <div>
+    <Header />
+    <MainContent />
+    <Sidebar />
+    <Footer />
+  </div>
+)
+
+export default DefaultLayout
+
+

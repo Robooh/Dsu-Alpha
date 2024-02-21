@@ -9,12 +9,16 @@ const Welcome = () => {
     return (
         <div className="welcome-page">
             <div className="welcome-content">
+                <div className="welcome-left-side">
                 <img src={user}  alt="Robo_oh" className="welcome-img" />
+                </div>
+                <div className="welcome-right-side">
                 <div className="welcome-text-container">
                     <h3 className="welcome-title">Bem vindo(a), a lanchonete da Dsu!</h3>
                     <img src={Risu} alt="Arisu" className="welcome-gif"/>
                     <h3  className="welcome-description">Descubra bolos e lanches, que certamente iram te interessar</h3>
                     <Link to="/products" className="welcome-button">Continue por aqui.</Link>
+                </div>
                 </div>
             </div>
         </div>

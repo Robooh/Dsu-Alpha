@@ -137,7 +137,7 @@ const filterItems = (e) =>  {
         </Link>
       </section>
 
-      <section className="container">
+      <section>
         <ul className="card" id="items">
           {filtered.map ((product) => (
             <li key={product.id}>

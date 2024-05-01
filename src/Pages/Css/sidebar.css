@@ -1,92 +1,60 @@
-img {
-    max-width: 200px;
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 250px;
+  height: 100%;
+  background: linear-gradient(to bottom, #333, #555);
+  transition: all 0.5s ease;
+  z-index: 999;
 }
 
-.head {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.logo {
+  width: 90%;
+  height: auto;
 }
 
-.shopping-icon {
-    display: flex;
-    color: #fff;
-    background: none;
-    border: none;
-    font-size: 22px;
+.sidebar.closed {
+  left: -250px;
 }
 
-
-
-
-
-.sidebar{
-    background-color: #8181A4;
-    position: fixed;
-    top: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    width: 240px;
-    height: 100%;
-    padding: 10px 10px 30px 10px;
-    border-right: 3px solid #161616;
-    
+.toggle-btn {
+  position: absolute;
+  top: 0;
+  right: -50px;
+  width: 50px;
+  height: 50px;
+  background: #333;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.5s ease;
 }
 
-.sidebar-header{
-    width: 100%;
-    margin-bottom: 16px;
+.toggle-btn.open {
+  right: 0;
 }
 
-.sidebar button {
-    height: 60px;
-    background: transparent;
-    border: 0;
-    font-family: inherit;
-    cursor: pointer;
-    text-align: left;
-    padding: 0;
+.toggle-btn span {
+  font-size: 24px;
 }
 
-.sidebar button  span {
-    display: inline-flex;
-    align-items: center;
-    gap: 5px;
-    height: 48px;
-    padding: 0 12px 0 12px;
-    line-height: 1;
-    transition: 0.4s ease-in-out;
-    font-size: 18px;
-    color: #000000;
-    
-    
+.nav-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 11px ;
+  color: #fff;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  margin-top: 10px;
 }
 
-.sidebar button:hover > span {
-    background-color: #4e4d69;
-    border-radius: 11px;
-    
+.nav-item:hover {
+  background: #444;
 }
 
-
-
-.sidebar > nav {
-    flex: 1 1 auto;
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-}
-
-
-.logo{
-    width: 50px;
-    min-height: 40px;
-    margin-left: 55px;
-}
-
-.dev{
-    margin-top: 3rem;
-    font-weight: 400;
-
+.nav-item span {
+  margin-left: 10px;
 }

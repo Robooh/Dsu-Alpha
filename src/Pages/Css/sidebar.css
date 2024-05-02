@@ -3,15 +3,26 @@
   top: 0;
   left: 0;
   width: 250px;
-  height: 100%;
+  height: 100vh;
   background: linear-gradient(to bottom, #333, #555);
   transition: all 0.5s ease;
   z-index: 999;
+  border-right: 4px solid #CAF4F3;
 }
 
+.logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3px;
+  border-bottom: 1px solid #CAF4F3;
+}
+
+
 .logo {
-  width: 90%;
-  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .sidebar.closed {
@@ -49,12 +60,113 @@
   text-decoration: none;
   transition: all 0.3s ease;
   margin-top: 10px;
+  border-bottom: 1px solid #CAF4F3;
+  border-radius: 5px;
+  cursor: pointer;
+  outline: none;
 }
 
 .nav-item:hover {
-  background: #444;
+  color: #fff;
+}
+
+.nav-item button {
+  border: 1px solid #141414 ;
 }
 
 .nav-item span {
+  font-size: 14px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 6px;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  border-bottom: 1px solid #CAF4F3;
+}
+
+.user-info img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.user-info span {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+.dropdown-container {
+  position: relative;
+  border-radius: 5px;
+}
+
+.dropdown-btn {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
   margin-left: 10px;
+}
+
+.dropdown-btn:hover {
+  background-color: #8181A4;
+  color: #fff;
+  border-radius: 50%;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: #141414;
+  border: 1px solid #CAF4F3;
+  padding: 10px;
+  display: none;
+}
+
+.dropdown-menu.open {
+  display: block;
+  transition: all 0.3s ease-in-out;
+}
+
+.dropdown-menu li {
+  margin-bottom: 10px;
+ 
+}
+
+.dropdown-menu li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.dropdown-menu li a:hover {
+  color: #8181A4;
+}
+
+.sidebar-footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 15px;
+  border-top: 1px solid #CAF4F3;
+  
+}
+
+.sidebar-footer img {
+  border-radius: 20%;
+  margin-right: 15px;
+}
+
+.sidebar-footer span {
+  font-size: 1.1rem;
+  color: #fff;
 }

@@ -1,18 +1,20 @@
 .bc-page{
-    margin-top: 150px;
+    background: linear-gradient(to right, #8d8d8d, #8181A4);
+    height: 100vh;
 }
 
 .container {
-    background-color: #fafafa;
-    border-radius: 30px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.55);
-    position: relative;
-    overflow: hidden;
-    width: 768px;
-    max-width: 100%;
-    min-height: 480px;
-    margin: 0 auto;
-
+        background-color: #fafafa;
+        border-radius: 30px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.55);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        overflow: hidden;
+        width: 768px;
+        max-width: 100%;
+        min-height: 480px;
 }
 
 .container p {
@@ -83,6 +85,8 @@
     width: 50%;
     z-index: 2;
 }
+
+
 
 .container.active .sign-in{
     transform: translateX(100%);

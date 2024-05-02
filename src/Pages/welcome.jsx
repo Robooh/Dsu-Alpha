@@ -10,7 +10,6 @@ import { FaLinkedin } from "react-icons/fa";
 
 
 const Welcome = () => {
-    const [isHidden, setIsHidden] = useState(false);
     const [isActive, setIsActive] = useState(false);
     const containerRef = useRef(null);
     const registerBtnRef = useRef(null);
@@ -27,7 +26,7 @@ const Welcome = () => {
     return (
         
         <div className="bc-page">
-            <div className={`container ${isHidden? "" : "hidden"}`} ref={containerRef} id="container">
+            <div className="container" ref={containerRef} id="container">
                 <div className="form-container sign-up">
                     <form>
                         <h1>Criar Conta</h1>
@@ -90,10 +89,6 @@ const Welcome = () => {
                         </div>
                     </div>
                 </div>
-            </div>
-            <div className="welcome-message">
-                <h1>Bem vindo a Lanchonete da Dsu</h1>
-                <button id="show-form" onClick={() => setIsHidden(!isHidden)}>Continue por aqui</button>
             </div>
         </div>
         

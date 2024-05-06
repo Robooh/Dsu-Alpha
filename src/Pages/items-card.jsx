@@ -136,7 +136,6 @@ const filterItems = (e) =>  {
         </button>
         </Link>
       </section>
-
       <section>
         <ul className="card" id="items">
           {filtered.map ((product) => (
@@ -161,6 +160,4 @@ const filterItems = (e) =>  {
 
 export default MenuSection;
 
-
-// A idea do menu vai ser,o Head vai levar em consideração a Sidebar, no meio vai ter o input de pesquisa,e na direita vai ficar vazio, no começo da pagina, vai ter um slider mostrando 4 items mais vendidos,
-// em baixo na esquera ira ter o grid com o comntainer com a categorias de items que quando usuario clicar,vai filtrar os item do array e mostrar apenas aqueles, e na direita vai ter uma lista que ira ser modificada pelo dito grid,por enquanto e Iso. 
+  

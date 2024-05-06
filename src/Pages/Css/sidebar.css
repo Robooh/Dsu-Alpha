@@ -25,6 +25,10 @@
   align-items: center;
 }
 
+img {
+  max-width: 200px;
+}
+
 .sidebar.closed {
   left: -250px;
 }

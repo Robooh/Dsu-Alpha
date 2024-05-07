@@ -136,10 +136,12 @@ const filterItems = (e) =>  {
         </button>
         </Link>
       </section>
-      <section>
+
+      <section className='items-content'>
+        <div className="grid-container">
         <ul className="card" id="items">
           {filtered.map ((product) => (
-            <li key={product.id}>
+            <li key={product.id} className='card-container'>
               <a href={`#item${product.id}`}>
                 <img src={product.image} alt={product.name} />
                 <h1>{product.name}</h1>
@@ -152,6 +154,7 @@ const filterItems = (e) =>  {
             </li>
           ))}
         </ul>
+        </div>
       </section>
     </main>
   );

@@ -57,12 +57,12 @@ img {
 
 .nav-item {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: space-between;
-  padding: 11px ;
+  justify-content: center;
+  margin-top: 10px;
   color: #fff;
   text-decoration: none;
-  transition: all 0.3s ease;
   margin-top: 10px;
   border-bottom: 1px solid #CAF4F3;
   border-radius: 5px;
@@ -70,12 +70,20 @@ img {
   outline: none;
 }
 
-.nav-item:hover {
-  color: #fff;
-}
+
 
 .nav-item button {
-  border: 1px solid #141414 ;
+ background-color: transparent;
+ border: none;
+ cursor: pointer;
+ padding: 5px;
+ transition: all 0.3s ease;
+}
+
+.nav-item button:hover {
+  background-color: #8181A4;
+  border-radius: 15px;
+  color: #fff;
 }
 
 .nav-item span {
@@ -85,6 +93,12 @@ img {
   justify-content: center;
   align-items: center;
   margin-left: 6px;
+}
+
+.nav-item button span {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #fff;
 }
 
 .user-info {

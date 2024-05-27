@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { useState } from 'react';
-import { FaBars,  FaBreadSlice, FaAngleRight} from 'react-icons/fa';
+import {  FaAngleRight} from 'react-icons/fa';
 import Logo from './Imgs/imagens/Logo-bg.png';
 import './Css/sidebar.css'
 import { Link } from 'react-router-dom';
@@ -42,7 +42,7 @@ const Sidebar = () => {
         <li><a href="#">Configurações</a></li>
         <li><a href="#">Endereço</a></li>
         <li><a href="#">Cartão</a></li>
-        <li><a href="#">Sair</a></li>
+       <Link to="/"><li><a>Sair</a></li></Link>
         </ul>
       </div>
     </div>
@@ -53,19 +53,21 @@ const Sidebar = () => {
       </button>
 
       <nav id="main" className='nav-item'>
-      <Link to="/"><button id="link1"> 
+        <button id="link1">
           <span>
-            <FaBars />
-            <span>Retornar</span>
+            <Link to="/products"><span>Menu</span></Link>
           </span>
         </button>
-        </Link>
-        
-        
+
         <button id="link2">
           <span>
-            <FaBreadSlice />
-            <Link to="/products"><span>Menu</span></Link>
+            <span>Discontos</span>
+          </span>
+        </button>
+        
+        <button id="link3">
+          <span>
+            <span>Duvidas</span>
           </span>
         </button>
       </nav>

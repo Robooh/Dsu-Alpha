@@ -10,7 +10,6 @@ import Alpes from './Imgs/Lunch/Cake/Cake-4.jpg';
 import Truf from './Imgs/Lunch/Cake/Cake-3.jpg';
 import Franc from './Imgs/Lunch/Cake/Cake-1.png'
 import Pastel from './Imgs/Lunch/Frys/3-F.jpg'
-import Pao from './Imgs/Lunch/Frys/4-F.jpg'
 import Affo from './Imgs/Lunch/Coffe/1-C.jpg'
 import Mocca from './Imgs/Lunch/Coffe/3-C.jpg'
 import Alter from './Imgs/Lunch/Lunch/L-4.jpeg'
@@ -47,20 +46,28 @@ const products = [
     price: 50.35,
     description: 'Bolo de chocolate, recheios de brigadeiro e cocada e com cobertura de mousse de chocolate'
   },
+
+  
   {
-    id: 5,
+    id: 9,
+    name: 'Alter',
+    image: Alter,
+    price: 18.95,
+    description: 'Pão, Queijo, Frango empanado, Bacon, Cebola Crispy, Salada e Molho Ranch'
+  },
+  {
+    id: 10,
+    name: 'Kaiser',
+    image: Kaiser,
+    price: 21.15,
+    description: 'Pão, Maionese, Hambúrguer 160g, Queijo prato, Cebola Roxa, Tomate e Alface'
+  },
+  {
+    id: 9,
     name: 'Pastel de 4 Queijos',
     image: Pastel,
     price: 6.15,
     description: 'Pastel de quatro queijo com cheddar, mussarela,  catupiri, gorgonzola e parmesão'
-  },
-
-  {
-    id: 6,
-    name: 'Pão de Batata',
-    image: Pao,
-    price: 7.15,
-    description: 'Pão de batata, recheado com cream cheese'
   },
   {
     id: 7,
@@ -76,21 +83,6 @@ const products = [
     price: 12.15,
     description: 'O Moca e uma variação de café com leite e creme ou chantily'
   },
-  {
-    id: 9,
-    name: 'Alter',
-    image: Alter,
-    price: 18.95,
-    description: '>Pão, Queijo, Frango empanado, Bacon, Cebola Crispy, Salada e Molho Ranch'
-  },
-  {
-    id: 10,
-    name: 'Kaiser',
-    image: Kaiser,
-    price: 21.15,
-    description: 'Pão, Maionese, Hambúrguer 160g, Queijo prato, Cebola Roxa, Tomate e Alface'
-  },
-
 ];
 
 
@@ -139,19 +131,17 @@ const filterItems = (e) =>  {
 
       <section className='items-content'>
         <div className="grid-container">
-        <ul className="card" id="items">
+        <ul className="card-container" id="items">
           {filtered.map ((product) => (
-            <li key={product.id} className='card-container'>
-              <a href={`#item${product.id}`}>
-                <img src={product.image} alt={product.name} />
-                <h1>{product.name}</h1>
-              </a>
-              <p className="price">R${product.price}</p>
-              <h3>{product.description}</h3>
-              <p>
+              <li key={product.id} className='card-container'>
+              <div className='card-info'>
+                 <img src={product.image} alt={product.name} />
+                <h1 className="name">{product.name}</h1>
+                <p className="price">R${product.price}</p>
+                <p className="description">{product.description}</p>
                 <button className="add-to-cart" onClick={(event) => addToCart(product, event)}>Adicionar ao Carrinho</button>
-              </p>
-            </li>
+              </div>
+            </li>            
           ))}
         </ul>
         </div>
